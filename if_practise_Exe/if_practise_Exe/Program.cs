@@ -54,7 +54,10 @@ namespace if_practise_Exe
                 {
                     PalindromeProgram();
                 }
-
+                else
+                {
+                    Console.WriteLine("Wrong Code, please try again");
+                }
 
                 Console.WriteLine("\n\nDo you want to choose another Exercise Y/N ?");
 
@@ -99,33 +102,47 @@ namespace if_practise_Exe
                 Console.WriteLine("These numbers are equal.\n");
             }
 
-            Console.ReadLine();
+     
 
         }
         public static void GuessMyNumber()
         {
+            Console.Clear();
             Console.WriteLine("-------Exercise 2--------\n");
-            
 
-            int myNum = 5;
+            Boolean menu = true;
+            do
+            {
+
+                int myNum = 5;
             int userNum;
-            Console.WriteLine("I'm thinking of a number between 1 and 10. Can you guess what it is");
+            Console.WriteLine("I'm thinking of a number between 1 and 10. Can you guess what it is???");
             userNum = int.Parse(Console.ReadLine());
 
             if (userNum == myNum)
             {
                 Console.WriteLine("Yes - You guessed my number!!");
+                    break;
             }
             else
             {
-                if (userNum > myNum) Console.WriteLine("That number is too high");
-                else Console.WriteLine("That number is too low");
+                if (userNum > myNum) Console.WriteLine("That number is too high, Try Again");
+                else Console.WriteLine("That number is too low, Try Again");
             }
-            Console.ReadKey();
+            
+                var check = Console.ReadLine().ToUpper();
+                if (check == "N")
+
+                { menu = false; }
+
+
+
+            } while (menu);
 
         }
         public static void Grade()
         {
+            Console.Clear();
             Console.WriteLine("-------Exercise 3-----------\n");
 
             int Mark;
@@ -143,17 +160,17 @@ namespace if_practise_Exe
 
             Console.WriteLine("Your Grade is {0}", Grade);
 
-            Console.ReadKey();
-
         }
         public static void OddorEven()
         {
+            Console.Clear();
             Console.WriteLine("-------Exercise 4-----------\n");
-
+            
             int R, num;
             int i = 0;
             while (i == 0)
             {
+
                 Console.Write("Please enter any number: ");
                 num = int.Parse(Console.ReadLine());
                 R = num % 2;
@@ -169,6 +186,7 @@ namespace if_practise_Exe
         }
         public static void NewPINNumberProgra()
         {
+            Console.Clear();
             Console.WriteLine("-------Exercise 5-----------\n");
 
             Boolean menu = true;
@@ -212,31 +230,49 @@ namespace if_practise_Exe
         }
         public static void PalindromeProgram()
         {
-            String str;
-            int i, j, flag = 1;
+            Console.Clear();
+            Console.WriteLine("-------Exercise 6-----------\n");
+            Boolean menu = true;
+            do
+            { 
+                string one, two, three;
 
-            Console.WriteLine("Enter any word");
-            str = Console.ReadLine();
+                Console.WriteLine("Enter the first letter");
+                one = Console.ReadLine();
 
-            for (i = 0, j = str.Length - 1;i != j;  i++, j--)
-            {
-                if (str[i] == str[j])
+                Console.WriteLine("Enter the second letter");
+                two = Console.ReadLine();
+
+                Console.WriteLine("Enter the third letter");
+                three = Console.ReadLine();
+
+
+                if ((two == "a") && (two == "e") && (two == "i") && (two == "o") && (two == "u"))
                 {
-
+                        Console.WriteLine("Well done, your word is a Palindrome!");
+                    break;
                 }
+                else if ( (one == three))
+                {
+                    Console.WriteLine("Well done, your word is a Palindrome!");
+                    break;
+                }
+                
                 else
                 {
-                    flag = 0;
+                    Console.WriteLine("Error!!This word is NOT a Palindrome!, try again Y/N");
                 }
-            }
-            if (flag == i)
-            {
-                Console.WriteLine("word is palindrome");
-            }
-            else
-            {
-                Console.WriteLine("word is not palindrome");
-            }
+
+
+                
+            var check = Console.ReadLine().ToUpper();
+            if (check == "N")
+
+                { menu = false; }
+
+
+
+        } while (menu);
 
             
         }
