@@ -16,15 +16,14 @@ namespace if_practise_Exe
             do
             {
                 Console.WriteLine("------Welcome to my application-------");
-                Console.WriteLine("You may choose from the option below\n");
-                Console.WriteLine("Exercise 1" + " CODE: E1");
-                Console.WriteLine("Exercise 2" + " CODE: E2");
-                Console.WriteLine("Exercise 3" + " CODE: E3");
-                Console.WriteLine("Exercise 4" + " CODE: E4");
-                Console.WriteLine("Exercise 5" + " CODE: E5");
-                Console.WriteLine("Exercise 6" + " CODE: E6");
-                Console.WriteLine("");
-                Console.WriteLine("Please enter the Code");
+                Console.WriteLine("You may choose from the following IF Practice Exercises below\n");
+                Console.WriteLine("Exercise 1: Comparing Integers\t\t" +" CODE: E1");
+                Console.WriteLine("Exercise 2: Guess My Number\t\t" +        " CODE: E2");
+                Console.WriteLine("Exercise 3: Grade\t\t\t" +                  " CODE: E3");
+                Console.WriteLine("Exercise 4: Odd n Even\t\t\t" +             " CODE: E4");
+                Console.WriteLine("Exercise 5: New PIN Number Program\t" + " CODE: E5");
+                Console.WriteLine("Exercise 6: Palindrome Program\t\t" +     " CODE: E6");
+                Console.Write("\nPlease enter the CODE:");
                 Code = Console.ReadLine().ToUpper();
 
                 if (Code == "E1")
@@ -48,7 +47,7 @@ namespace if_practise_Exe
 
                 else if (Code == "E5")
                 {
-                    NewPINNumberProgra();
+                    NewPINNumberProgram();
                 }
                 else if (Code == "E6")
                 {
@@ -57,6 +56,7 @@ namespace if_practise_Exe
                 else
                 {
                     Console.WriteLine("Wrong Code, please try again");
+                 
                 }
 
                 Console.WriteLine("\n\nDo you want to choose another Exercise Y/N ?");
@@ -78,31 +78,44 @@ namespace if_practise_Exe
             Console.Clear();
             Console.WriteLine("-----------Exercise 1---------\n");
 
-            int integer1 = 0;
+            Boolean menu = true;
+            do
+            {
+                int integer1 = 0;
             int integer2 = 0;
 
-            Console.WriteLine("Please enter first number.\n");
+            Console.Write("Please enter first number: ");
             integer1 = Int32.Parse(Console.ReadLine());
 
-            Console.WriteLine("Please enter second number.\n");
+            Console.Write("Please enter second number: ");
             integer2 = Int32.Parse(Console.ReadLine());
 
             if (integer1 > integer2)
             {
-                Console.WriteLine("{0} is larger then {1}.\n", integer1, integer2);
+                Console.WriteLine("\n{0} is larger then {1}.", integer1, integer2);
             }
 
             if (integer2 > integer1)
             {
-                Console.WriteLine("{0} is larger then {1}.\n", integer2, integer1);
+                Console.WriteLine("\n{0} is larger then {1}.", integer2, integer1);
             }
 
             if (integer1 == integer2)
             {
-                Console.WriteLine("These numbers are equal.\n");
+                Console.WriteLine("\nThese numbers are equal.");
             }
+                Console.WriteLine("\n\nDo you want try again: Y/N ?");
 
-     
+                var check = Console.ReadLine().ToUpper();
+                if (check == "N")
+
+                { menu = false; }
+
+
+                Console.Clear();
+            } while (menu);
+
+
 
         }
         public static void GuessMyNumber()
@@ -136,7 +149,7 @@ namespace if_practise_Exe
                 { menu = false; }
 
 
-
+                Console.Clear();
             } while (menu);
 
         }
@@ -145,7 +158,13 @@ namespace if_practise_Exe
             Console.Clear();
             Console.WriteLine("-------Exercise 3-----------\n");
 
-            int Mark;
+            
+
+            Boolean menu = true;
+            do
+            { 
+
+                int Mark;
             string Grade;
 
             Console.WriteLine("Please enter your Course Final Mark out of 100");
@@ -160,13 +179,26 @@ namespace if_practise_Exe
 
             Console.WriteLine("Your Grade is {0}", Grade);
 
+             Console.WriteLine("\n\nDo you want to enter a differnt mark Y/N");
+
+                var check = Console.ReadLine().ToUpper();
+                if (check == "N")
+
+                { menu = false; }
+
+            } while (menu);
+
         }
         public static void OddorEven()
         {
             Console.Clear();
             Console.WriteLine("-------Exercise 4-----------\n");
-            
-            int R, num;
+
+            Boolean menu = true;
+            do
+            {
+
+                int R, num;
             int i = 0;
             while (i == 0)
             {
@@ -182,9 +214,17 @@ namespace if_practise_Exe
                 else Console.WriteLine("That number is an odd number");
                 break;
             }
+                Console.WriteLine("\n\nDo you want to enter a differnt number? Y/N");
+
+                var check = Console.ReadLine().ToUpper();
+                if (check == "N")
+
+                { menu = false; }
+                Console.Clear();
+            } while (menu);
 
         }
-        public static void NewPINNumberProgra()
+        public static void NewPINNumberProgram()
         {
             Console.Clear();
             Console.WriteLine("-------Exercise 5-----------\n");
@@ -271,8 +311,8 @@ namespace if_practise_Exe
                 { menu = false; }
 
 
-
-        } while (menu);
+                Console.Clear();
+            } while (menu);
 
             
         }
