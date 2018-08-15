@@ -286,22 +286,22 @@ namespace if_practise_Exe
                 Console.WriteLine("Enter the third letter");
                 three = Console.ReadLine();
 
+                if ((one == three))
+                {
+                    if ((two == "a") || (two == "e") || (two == "i") || (two == "o") || (two == "u"))
+                    {
+                        Console.WriteLine("Well done, {0}{1}{2} is a Palindrome!", one,two,three);
+                        break;
+                    }
+                    else
+                        Console.WriteLine("Error!!This word is NOT a Palindrome!, try again Y/N");
 
-                if ((two == "a") && (two == "e") && (two == "i") && (two == "o") && (two == "u"))
-                {
-                        Console.WriteLine("Well done, your word is a Palindrome!");
-                    break;
                 }
-                else if ( (one == three))
-                {
-                    Console.WriteLine("Well done, your word is a Palindrome!");
-                    break;
-                }
-                
+
                 else
-                {
+                
                     Console.WriteLine("Error!!This word is NOT a Palindrome!, try again Y/N");
-                }
+                
 
 
                 

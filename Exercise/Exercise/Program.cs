@@ -30,7 +30,7 @@ namespace Exercise
 
                 else if (Code == "T2")
                 {
-                    MathFunctions();
+                    MathFunctions(); 
 
                 }
                 else if (Code == "T3")
