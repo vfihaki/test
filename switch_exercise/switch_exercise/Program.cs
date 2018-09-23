@@ -84,7 +84,8 @@ namespace switch_exercise
                         Console.WriteLine("Error!! not a pet, try again");
                         break;
 
-            }
+                }
+
                 Console.WriteLine("\n\nDo you want to try again? Y/N");
 
                 var check = Console.ReadLine().ToUpper();
@@ -109,12 +110,8 @@ namespace switch_exercise
                     Console.WriteLine("Kiwifruits ");
                     Console.WriteLine("Oranges ");
                     Console.Write("Enter Your Selection: ");
-
-
                     string menuSelection = "";
                     double totalPrice = double.MinValue;
-
-
                     menuSelection = Console.ReadLine();
 
                     switch (menuSelection)

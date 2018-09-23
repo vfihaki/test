@@ -107,17 +107,14 @@ namespace Exercise
             int operation = 0;
             //stock the result of the operation
             double result = 0;
-
             //Ask user first number
             Console.WriteLine("Type you first number :");
             string stringFirstNumber = Console.ReadLine();
             double firstNumber = Convert.ToDouble(stringFirstNumber);
-
             //Ask user second number
             Console.WriteLine("Type you second number :");
             string stringSecondNumber = Console.ReadLine();
             double secondNumber = Convert.ToDouble(stringSecondNumber);
-
             //Ask user operation to use
             Console.WriteLine("Enter the operation + (addition), - (soustraction), * (multiplication), / (division) :");
             string stringOperation = Console.ReadLine();
@@ -156,9 +153,7 @@ namespace Exercise
 
                 case 4:
                     result = firstNumber / secondNumber;
-                    break;
-
-                
+                    break;   
             }
             Console.WriteLine("\nResult of " + firstNumber + " " + stringOperation + " " + secondNumber + " = " + result);
             Console.ReadKey();

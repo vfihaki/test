@@ -10,7 +10,7 @@ namespace if_practise_Exe
     {
         static void Main(string[] args)
         {
-            String Code;
+               String Code;
 
             Boolean menu = true;
             do
@@ -82,29 +82,29 @@ namespace if_practise_Exe
             do
             {
                 int integer1 = 0;
-            int integer2 = 0;
+                int integer2 = 0;
 
-            Console.Write("Please enter first number: ");
-            integer1 = Int32.Parse(Console.ReadLine());
+                Console.Write("Please enter first number: ");
+                integer1 = Int32.Parse(Console.ReadLine());
 
-            Console.Write("Please enter second number: ");
-            integer2 = Int32.Parse(Console.ReadLine());
+                Console.Write("Please enter second number: ");
+                integer2 = Int32.Parse(Console.ReadLine());
 
-            if (integer1 > integer2)
-            {
-                Console.WriteLine("\n{0} is larger then {1}.", integer1, integer2);
-            }
+                if (integer1 > integer2)
+                {
+                    Console.WriteLine("\n{0} is larger then {1}.", integer1, integer2);
+                }
 
-            if (integer2 > integer1)
-            {
-                Console.WriteLine("\n{0} is larger then {1}.", integer2, integer1);
-            }
+                if (integer2 > integer1)
+                {
+                    Console.WriteLine("\n{0} is larger then {1}.", integer2, integer1);
+                }
 
-            if (integer1 == integer2)
-            {
-                Console.WriteLine("\nThese numbers are equal.");
-            }
-                Console.WriteLine("\n\nDo you want try again: Y/N ?");
+                if (integer1 == integer2)
+                {
+                    Console.WriteLine("\nThese numbers are equal.");
+                }
+                    Console.WriteLine("\n\nDo you want try again: Y/N ?");
 
                 var check = Console.ReadLine().ToUpper();
                 if (check == "N")
@@ -128,20 +128,20 @@ namespace if_practise_Exe
             {
 
                 int myNum = 5;
-            int userNum;
-            Console.WriteLine("I'm thinking of a number between 1 and 10. Can you guess what it is???");
-            userNum = int.Parse(Console.ReadLine());
+                int userNum;
+                Console.WriteLine("I'm thinking of a number between 1 and 10. Can you guess what it is???");
+                userNum = int.Parse(Console.ReadLine());
 
-            if (userNum == myNum)
-            {
-                Console.WriteLine("Yes - You guessed my number!!");
-                    break;
-            }
-            else
-            {
-                if (userNum > myNum) Console.WriteLine("That number is too high, Try Again");
-                else Console.WriteLine("That number is too low, Try Again");
-            }
+                if (userNum == myNum)
+                {
+                    Console.WriteLine("Yes - You guessed my number!!");
+                        break;
+                }
+                else
+                {
+                    if (userNum > myNum) Console.WriteLine("That number is too high, Try Again");
+                    else Console.WriteLine("That number is too low, Try Again");
+                }
             
                 var check = Console.ReadLine().ToUpper();
                 if (check == "N")
@@ -155,6 +155,8 @@ namespace if_practise_Exe
         }
         public static void Grade()
         {
+
+        
             Console.Clear();
             Console.WriteLine("-------Exercise 3-----------\n");
 
@@ -165,21 +167,21 @@ namespace if_practise_Exe
             { 
 
                 int Mark;
-            string Grade;
+                string Grade;
 
-            Console.WriteLine("Please enter your Course Final Mark out of 100");
-            Mark = int.Parse(Console.ReadLine());
+                Console.WriteLine("Please enter your Course Final Mark out of 100");
+                Mark = int.Parse(Console.ReadLine());
 
-            if (Mark >= 90 && Mark <=100) Grade = "A+";
-            else if (Mark >= 80 && Mark <= 89) Grade = "A";
-            else if (Mark >= 70 && Mark <= 79) Grade = "B+";
-            else if (Mark >= 60 && Mark <= 69) Grade = "B";
-            else if (Mark >= 50 && Mark <= 59) Grade = "C";
-            else Grade = "F";
+                if (Mark >= 90 && Mark <=100) Grade = "A+";
+                else if (Mark >= 80 && Mark <= 89) Grade = "A";
+                else if (Mark >= 70 && Mark <= 79) Grade = "B+";
+                else if (Mark >= 60 && Mark <= 69) Grade = "B";
+                else if (Mark >= 50 && Mark <= 59) Grade = "C";
+                else Grade = "F";
 
-            Console.WriteLine("Your Grade is {0}", Grade);
+                Console.WriteLine("Your Grade is {0}", Grade);
 
-             Console.WriteLine("\n\nDo you want to enter a differnt mark Y/N");
+                    Console.WriteLine("\n\nDo you want to enter a differnt mark Y/N");
 
                 var check = Console.ReadLine().ToUpper();
                 if (check == "N")
@@ -214,7 +216,7 @@ namespace if_practise_Exe
                 else Console.WriteLine("That number is an odd number");
                 break;
             }
-                Console.WriteLine("\n\nDo you want to enter a differnt number? Y/N");
+                Console.WriteLine("\n\nDo you want to try a differnt number? Y/N");
 
                 var check = Console.ReadLine().ToUpper();
                 if (check == "N")
@@ -233,30 +235,26 @@ namespace if_practise_Exe
             do
             {
 
-             int pin = 0;
-            int pin2 = 0;
-            Console.Write("Please enter your 4-digit pin number:");
-            pin = int.Parse(Console.ReadLine());
+                    int pin = 0;
+                    int pin2 = 0;
+                    Console.Write("Please enter your 4-digit pin number:");
+                    pin = int.Parse(Console.ReadLine());
 
-            if ((pin < 1000) || (pin > 9999))
-            {
-                Console.Write("That is not a valid 4-digit pin, press any key to exit program");
-                
-            }
-            else 
-            {
-                Console.Write("Please re-enter your pin:");
-                pin2 = int.Parse(Console.ReadLine());
-                    if (pin == pin2)
+                    if ((pin < 1000) || (pin > 9999))
                     {
-                        Console.WriteLine("Your pin has been set");
-                        break;
+                        Console.Write("That is not a valid 4-digit pin, press any key to exit program");
                     }
-
-                    else Console.WriteLine("Error, your pin was not set! Please try again");
-                    
-                }
-                
+                    else 
+                    {
+                    Console.Write("Please re-enter your pin:");
+                    pin2 = int.Parse(Console.ReadLine());
+                        if (pin == pin2)
+                        {
+                            Console.WriteLine("Your pin has been set");
+                            break;
+                        }
+                        else Console.WriteLine("Error, your pin was not set! Please try again");                   
+                    }
 
                 var check = Console.ReadLine().ToUpper();
                 if (check == "N")
